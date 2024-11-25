@@ -19,3 +19,11 @@ generate:
 	git push
 
 all: install format lint test
+
+
+
+docker-build:
+	docker build -t kaisenyao/ids706-mini12 .
+
+docker-run:
+	docker run -v $(PWD):/app kaisenyao/ids706-mini12
