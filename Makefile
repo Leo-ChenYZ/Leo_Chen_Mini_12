@@ -15,8 +15,8 @@ generate:
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
 	git add .
-	git commit -m "test"
-	git push
+	git diff --quiet && git diff --staged --quiet || git commit -m "test"
+	git push || true
 
 all: install format lint test
 
