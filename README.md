@@ -1,65 +1,46 @@
+# Kaisen_Yao_IDS706_Mini12_Dockerized Application
 
+[![CI](https://github.com/nogibjj/Kaisen_Yao_IDS706_Mini12/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Kaisen_Yao_IDS706_Mini12/actions/workflows/workflow.yml)
 
 dockerhub address：https://hub.docker.com/r/kaisenyao/ids706-mini12
 
+## Docker Configuration
 
+- The Docker environment is pre-configured. To run the application, first build the Docker image with `make docker-build`, then run the image with `make docker-run`.
+- The program directory is mounted to the Docker container, so there's no need to rebuild the Docker image after making changes to the program. The generated output files, such as reports or visualizations, will automatically appear in your local directory.
+- GitHub Actions is configured to automatically push the Docker image to Docker Hub: [kaisenyao/ids706-mini12](https://hub.docker.com/r/kaisenyao/ids706-mini12).
 
-# IDS706 Polars Assignment by Kaisen Yao
+## Dataset Overview
 
-[![CI](https://github.com/kaisenyao/Polars_descriptive/actions/workflows/workflow.yml/badge.svg)](https://github.com/kaisenyao/Polars_descriptive/actions/workflows/workflow.yml)
+The dataset provides details regarding employee salaries within a company, with each row corresponding to an individual employee. Key attributes include:
 
-This repository contains my work for the **Polars Descriptive Statistics Script** assignment in IDS 706. The script reads a dataset, generates summary statistics, and creates a data visualization. To use it, simply link it to a GitHub codespace and wait for the devcontainer to run the Makefile, which will execute the following tasks: install, format, lint, and test.
-Also, it include a comparison betwwen using Pandas and Polars
+- Age: Numerical value in years.
+- Gender: Categorized as male or female.
+- Education Level: Categorized as high school, bachelor’s degree, master’s degree, or PhD.
+- Job Title: Positions like manager, analyst, engineer, or administrator.
+- Years of Experience: Numeric value representing work experience.
+- Salary: Annual income in US dollars, varying based on job title, experience, and education.
 
-This repository includes the following main components:
+## Project Features
 
-* `.devcontainer`
-* `Makefile`
-* `requirements.txt`
-* `README.md` 
-* `githubactions` 
-* `Dockerfile`
+1. A Python script utilizing the Polars library to process the dataset, generate summary statistics, and visualize data distributions. Key results are summarized in a markdown report.
+2. Comparison of data analysis using both Pandas and Polars, showcasing performance differences and output similarities.
+3. Configured GitHub Actions for continuous integration, automatically testing and running the program, and generating analysis files.
+4. Developed a `Makefile` to automate installation, formatting, linting, and testing tasks in the development environment.
 
-## Purpose
-The purpose of this project is to create a Python script that performs descriptive statistics on a given dataset using Polars. The script:
-1. Reads a dataset (CSV).
-2. Generates key summary statistics such as mean, median, and standard deviation.
-3. Creates a histogram to visualize the distribution of a numerical column.
+## Data Analysis
 
-The project uses `matplotlib` for data visualization and provides a markdown report summarizing the results.
+Key outputs include:
 
-## Preparation
-1. Open codespaces.
-2. Load repo to codespaces.
-3. Wait for the installation of all the requirements in `requirements.txt`.
-4. Run the Makefile code: `make all`.
+- **Summary Statistics**: Important metrics like mean, median, and standard deviation for numerical fields (`Age`, `Years of Experience`, `Salary`) rounded to two decimal places.
+  - [Summary Comparison Report](sandbox:/mnt/data/summary_comparison_report.md)
+  - [Profiler Comparison Report](sandbox:/mnt/data/profiler_comparison_report.md)
 
-## About the Dataset
-This dataset provides details regarding employee salaries within a company. Each row corresponds to an individual employee, with columns capturing various attributes, including age, gender, education, job title, experience, and salary.
-
-**Columns**:
-1. Age: The age of the employee, given as a numerical value in years.
-2. Gender: The employee’s gender, categorized as male or female.
-3. Education Level: Indicates the employee’s highest educational qualification, categorized as high school, bachelor’s degree, master’s degree, or PhD.
-4. Job Title: The position held by the employee within the company, with possible titles such as manager, analyst, engineer, or administrator.
-5. Years of Experience: The number of years the employee has been working, represented as a numeric value.
-6. Salary: The employee’s annual income, listed in US dollars, varying based on job title, experience, and education.
-
-## Outputs
-
-1. **Summary ReportS**: The script computes and outputs important summary statistics rounded to 2 decimal places for numerical columns like `Age`, `Years of Experience`, and `Salary`, comparing using both Pandas and Polars.
-
-   [Summary comparison report](sandbox:/mnt/data/summary_comparison_report.md)
-   [Profiler comparison report](sandbox:/mnt/data/profiler_comparison_report.md)
-
-2. **Salary Distribution Visualization**: A histogram showcasing the distribution of salary in the dataset is generated using Polars.
-
-   ![Salary Distribution](data_visualization.png)
+- **Data Visualizations**: Generated a histogram to visualize salary distribution.
+  - ![Salary Distribution](data_visualization.png)
 
 ## Example Output
 
-Here’s an example of the summary statistics generated by the script:
+Below is an example of the summary statistics generated by the script:
 
-   ![Summary Statistics](summary_statistics.jpg)
-
-The script provides a clean and concise summary of the dataset's most important numerical fields.
+![Summary Statistics](summary_statistics.jpg)
