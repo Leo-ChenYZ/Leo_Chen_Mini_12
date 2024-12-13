@@ -31,11 +31,8 @@ The dataset provides details regarding employee salaries within a company, with 
 Key outputs include:
 
 - **Summary Statistics**: Important metrics like mean, median, and standard deviation for numerical fields (`Age`, `Years of Experience`, `Salary`) rounded to two decimal places.
-  - [Summary Comparison Report](sandbox:/mnt/data/summary_comparison_report.md)
-  - [Profiler Comparison Report](sandbox:/mnt/data/profiler_comparison_report.md)
-
 - **Data Visualizations**: Generated a histogram to visualize salary distribution.
-  - ![Salary Distribution](data_visualization.png)
+  ![Salary Distribution](data_visualization.png)
 
 ## Example Output
 
