@@ -1,8 +1,6 @@
-# Kaisen_Yao_IDS706_Mini12_Dockerized Application
+# Leo Chen Mini 12 (Recovered)
 
 [![CI](https://github.com/nogibjj/Kaisen_Yao_IDS706_Mini12/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Kaisen_Yao_IDS706_Mini12/actions/workflows/workflow.yml)
-
-dockerhub address：https://hub.docker.com/r/kaisenyao/ids706-mini12
 
 ## Docker Configuration
 
