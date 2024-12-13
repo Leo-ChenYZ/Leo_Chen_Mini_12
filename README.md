@@ -6,7 +6,7 @@
 
 - The Docker environment is pre-configured. To run the application, first build the Docker image with `make docker-build`, then run the image with `make docker-run`.
 - The program directory is mounted to the Docker container, so there's no need to rebuild the Docker image after making changes to the program. The generated output files, such as reports or visualizations, will automatically appear in your local directory.
-- GitHub Actions is configured to automatically push the Docker image to Docker Hub: [kaisenyao/ids706-mini12](https://hub.docker.com/r/kaisenyao/ids706-mini12).
+- GitHub Actions is configured to automatically push the Docker image to Docker Hub.
 
 ## Dataset Overview
 
